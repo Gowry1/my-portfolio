@@ -2,6 +2,7 @@ export interface Project {
   name: string;
   description: string;
   tech: string[];
+  image: string;
   imageAlt: string;
   githubUrl: string;
   liveUrl: string;
@@ -22,6 +23,7 @@ export const projects: Project[] = [
       "AWS",
       "Docker",
     ],
+    image: "/images/hotel.jpg",
     imageAlt: "Hotel Management System screenshot",
     githubUrl: "",
     liveUrl: "",
@@ -31,6 +33,7 @@ export const projects: Project[] = [
     description:
       "Backend system for orders and inventory using Kafka, PostgreSQL, and CI/CD pipelines with Jenkins.",
     tech: ["Java", "Spring Boot", "Kafka", "PostgreSQL", "Docker", "Jenkins"],
+    image: "/images/restaurant.jpg",
     imageAlt: "Restaurant project screenshot",
     githubUrl: "",
     liveUrl: "",
@@ -47,6 +50,7 @@ export const projects: Project[] = [
       "MySQL",
       "scikit-learn",
     ],
+    image: "/images/stutter.jpg",
     imageAlt: "ML app screenshot",
     githubUrl: "",
     liveUrl: "",

@@ -47,10 +47,10 @@ export function Projects() {
             <Card className="group">
               <div className="relative aspect-[16/10] overflow-hidden">
                 <Image
-                  src="/images/project-placeholder.svg"
+                  src={p.image}
                   alt={p.imageAlt}
                   fill
-                  className="object-cover transition group-hover:scale-105"
+                  className="object-cover transition duration-500 group-hover:scale-105"
                 />
               </div>
 

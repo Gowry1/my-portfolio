@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import emailjs from "@emailjs/browser";
 
 type FormState = {
   name: string;
@@ -43,14 +44,48 @@ export function Contact() {
 
   const isValid = Object.keys(errors).length === 0;
 
-  function onSubmit(e: FormEvent) {
+  async function onSubmit(e: FormEvent) {
     e.preventDefault();
-    setTouched({ name: true, email: true, message: true });
+
+    setTouched({
+      name: true,
+      email: true,
+      message: true,
+    });
+
     if (!isValid) return;
-    setSubmitted(true);
-    setTimeout(() => setSubmitted(false), 2200);
-    setState({ name: "", email: "", message: "" });
-    setTouched({ name: false, email: false, message: false });
+
+    try {
+      await emailjs.send(
+        process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
+        process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID!,
+        {
+          from_name: state.name,
+          from_email: state.email,
+          message: state.message,
+        },
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY!,
+      );
+
+      setSubmitted(true);
+
+      setTimeout(() => setSubmitted(false), 2200);
+
+      setState({
+        name: "",
+        email: "",
+        message: "",
+      });
+
+      setTouched({
+        name: false,
+        email: false,
+        message: false,
+      });
+    } catch (error) {
+      console.error(error);
+      alert("Failed to send message");
+    }
   }
 
   return (
