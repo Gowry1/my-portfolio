@@ -5,6 +5,7 @@ import { Skills } from "@/components/sections/skills";
 import { Projects } from "@/components/sections/projects";
 import { Journey } from "@/components/sections/journey";
 import { Contact } from "@/components/sections/contact";
+import { Education } from "@/components/sections/education";
 import { Footer } from "@/components/footer";
 
 export default function HomePage() {
@@ -17,10 +18,10 @@ export default function HomePage() {
         <Skills />
         <Projects />
         <Journey />
+        <Education />
         <Contact />
       </main>
       <Footer />
     </div>
   );
 }
-

@@ -22,12 +22,6 @@ const items = [
     company: "Samuel Gnanam IT · Jaffna, Sri Lanka",
     desc: "Built backend Java and Node.js components using OOP principles and established design patterns. Designed scalable relational database schemas and optimised SQL queries for PostgreSQL and MySQL. Collaborated on requirements gathering and defect triage aligned to SDLC practices.",
   },
-  {
-    when: "Sep 2023 — Jun 2024",
-    title: "B.Sc. (Hons) Computer Science & Software Engineering",
-    company: "University of Bedfordshire · Second Class Upper",
-    desc: "Studied software engineering fundamentals, algorithms, and system design. Complemented concurrent industry experience with structured academic depth in computer science.",
-  },
 ];
 
 export function Journey() {
