@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+import type {} from "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 
 const inter = Inter({
@@ -11,21 +11,21 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Your Name — Portfolio",
-    template: "%s — Your Name",
+    default: "Gowryshuthan — Portfolio",
+    template: "%s — Gowryshuthan",
   },
   description:
     "Minimal, premium portfolio for a frontend developer. Built with Next.js, Tailwind, and Framer Motion.",
   metadataBase: new URL("https://example.com"),
   openGraph: {
-    title: "Your Name — Portfolio",
+    title: "Gowryshuthan — Portfolio",
     description:
       "Minimal, premium portfolio for a frontend developer. Built with Next.js, Tailwind, and Framer Motion.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Your Name — Portfolio",
+    title: "Gowryshuthan — Portfolio",
     description:
       "Minimal, premium portfolio for a frontend developer. Built with Next.js, Tailwind, and Framer Motion.",
   },

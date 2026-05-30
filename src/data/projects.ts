@@ -55,4 +55,14 @@ export const projects: Project[] = [
     githubUrl: "",
     liveUrl: "",
   },
+  {
+    name: "Coir Factory (Full Stack)",
+    description:
+      "A full-stack industrial management system built with React frontend and NestJS backend. It handles production workflows, responsive UI, and scalable API architecture for coir manufacturing operations.",
+    image: "/projects/coir-factory.png",
+    imageAlt: "Coir Factory full stack application dashboard",
+    tech: ["React", "TypeScript", "NestJS", "Node.js", "REST API", "CSS"],
+    githubUrl: "https://github.com/Gowry1/coir-factory-front-end",
+    liveUrl: "", // add if you deployed it
+  },
 ];
