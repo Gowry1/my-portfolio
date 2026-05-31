@@ -44,7 +44,7 @@ export function Projects() {
       <div className="mt-8 grid gap-6 md:grid-cols-2">
         {projects.map((p) => (
           <Reveal key={p.name}>
-            <Card className="group">
+            <Card className="group h-full flex flex-col">
               <div className="relative aspect-[16/10] overflow-hidden">
                 <Image
                   src={p.image}
@@ -54,7 +54,7 @@ export function Projects() {
                 />
               </div>
 
-              <CardContent className="p-6">
+              <CardContent className="p-6 flex flex-col flex-1">
                 <h3 className="text-lg font-semibold">{p.name}</h3>
 
                 <p className="mt-2 text-sm text-muted-foreground">
@@ -67,18 +67,27 @@ export function Projects() {
                   ))}
                 </div>
 
-                <div className="mt-5 flex gap-3">
-                  {p.githubUrl && (
-                    <LinkPill href={p.githubUrl}>
-                      <Github className="h-4 w-4" /> Code
-                    </LinkPill>
-                  )}
+                {/* PUSH LINKS TO BOTTOM */}
+                <div className="mt-auto">
+                  <div className="mt-5 flex gap-3 flex-wrap">
+                    {p.githubUrl && (
+                      <LinkPill href={p.githubUrl}>
+                        <Github className="h-4 w-4" /> Code
+                      </LinkPill>
+                    )}
 
-                  {p.liveUrl && (
-                    <LinkPill href={p.liveUrl}>
-                      <ExternalLink className="h-4 w-4" /> Live
-                    </LinkPill>
-                  )}
+                    {p.backendUrl && (
+                      <LinkPill href={p.backendUrl}>
+                        <Github className="h-4 w-4" /> Backend
+                      </LinkPill>
+                    )}
+
+                    {p.liveUrl && (
+                      <LinkPill href={p.liveUrl}>
+                        <ExternalLink className="h-4 w-4" /> Live
+                      </LinkPill>
+                    )}
+                  </div>
                 </div>
               </CardContent>
             </Card>
